@@ -1,0 +1,42 @@
+.crystals-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+
+.crystalButton {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.crystalButton:hover {
+    box-shadow: 6px 6px 52px 10px rgba(0,0,0,0.47);
+  }
+
+img {
+    width: 50px;
+
+}
+
+
+#result,
+#previous {
+    font-size: 24px;
+    color: red;
+}
+
+h1 {
+    font-family: 'Berkshire Swash', cursive;
+
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    width: 75%;
+    margin: 0;
+    padding: 0;
+
+}
