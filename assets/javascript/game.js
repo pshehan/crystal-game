@@ -1,7 +1,7 @@
 var randomResult;
 var lose = 0;
 var win = 0;
-var previous = 0;
+var current = 0;
 
 var fresh = function () {
 //When the game begins , the player should see a new random number.
@@ -43,7 +43,8 @@ var fresh = function () {
             
     }
     //The app should show the number of games the player wins and loses. 
-    $("#previous").html("Total Score: " + previous);
+    $("#current").html("Total Score: " + current);
+    
 }
 
 fresh();
@@ -52,26 +53,26 @@ $(document).on("click", ".crystalButton", function () {
 
     var num = parseInt($(this).attr("data-random"));
 
-    previous += num;
+    current += num;
 
-    $("#previous").html(previous);
+    $("#current").html(current);
 //The player loses if their score goes above the random number.
 
-    if (previous > randomResult) {
+    if (current > randomResult) {
         lose++;
 
         $("#lose").html(lose);
-        previous = 0;
+        current = 0;
 //the game restarts whenever the player loses.
         fresh();
         alert("you lose")
 
         //The player wins if their total score matches the random number 
-    } else if (previous === randomResult) {
+    } else if (current === randomResult) {
         win++;
         $("#win").html(win);
 
-        previous = 0;
+        current = 0;
 //the game restarts whenever the player wins.
         fresh();
         alert("you win");
